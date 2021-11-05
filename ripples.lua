@@ -3,7 +3,7 @@
 -- water droplet sequencer
 -- v0.3 entropybound
 
-engine.name = "Sines"
+engine.name = "Ripples"
 
 -- natural units
 deltat = 0.2 -- tick period
@@ -81,11 +81,11 @@ function erase_stone(i)
   end
   
   for is=i,ns do
-    sx[id-1]=sx[id]
-    sy[id-1]=sy[id]
-    st[id-1]=st[id]
-    sn[id-1]=sn[id]
-    ss[id-1]=ss[id]
+    sx[is-1]=sx[is]
+    sy[is-1]=sy[is]
+    st[is-1]=st[is]
+    sn[is-1]=sn[is]
+    ss[is-1]=ss[is]
   end
   ns = ns-1
 end
@@ -237,12 +237,12 @@ function init()
   push_drop(24,2,0,2)
   --push_drop(20,4,0,2)
   --push_drop(29,5,0,2)
-  push_drop(16,15,0,1)
+  --push_drop(16,15,0,1)
   
   push_stone(8,8,0,40)
-  push_stone(12,8,0,67)
-  push_stone(16,8,0,69)
-  push_stone(20,8,0,65)
-  push_stone(24,8,0,64)
-  push_stone(28,8,0,76)
+  --push_stone(12,8,0,67)
+  --push_stone(16,8,0,69)
+  --push_stone(20,8,0,65)
+  --push_stone(24,8,0,64)
+  --push_stone(28,8,0,76)
 end
