@@ -23,7 +23,8 @@ Engine_Ripples : CroneEngine {
       //amp_ = EnvGen.ar(Env.circle([0, 1, 0], [amp_atk, amp_rel, 0.001]), levelBias: env_bias);
       hz_ = Lag.ar(K2A.ar(hz), hz_lag);
       pan_ = Lag.ar(K2A.ar(pan), pan_lag);
-      vol_ = Lag.ar(K2A.ar(vol), vol_lag);
+      vol_ = vol;
+      //vol_ = Lag.ar(K2A.ar(vol), vol_lag);
       //could also try replacing with https://doc.sccode.org/Classes/PMOsc.html
       mod = SinOsc.ar(hz_ * modPartial, 0, hz_ * fm_index * LFNoise1.kr(5.reciprocal).abs);
       car = SinOsc.ar(hz_ * carPartial + mod, 0, mul);
